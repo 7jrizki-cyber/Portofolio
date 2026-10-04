@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rizki Badrur Ramadhan | Portofolio XII TKJ A</title>
+<meta name="description" content="Portofolio personal Rizki Badrur Ramadhan, siswa XII TKJ A SMK 3 Perguruan Cikini yang sedang belajar programming dan game development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">R<span>.</span></a>
+  <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <nav id="menu" aria-label="Navigasi utama">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#journey">Learning Journey</a>
+    <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <a href="#contact" class="btn gold sm">Let's Connect</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="mono muted">XII TKJ A &middot; SMK 3 Perguruan Cikini</p>
+    <h1>Building My Skills,<br>One Line of Code at a Time.</h1>
+    <p class="name">Rizki Badrur Ramadhan</p>
+    <p class="mono gold-t"><span id="typing"></span><b class="cursor">|</b></p>
+    <p class="lead">Saya adalah siswa SMK 3 Perguruan Cikini dari jurusan Teknik Komputer dan Jaringan yang sedang mempelajari dunia teknologi, programming, game development, dan berbagai bidang digital.</p>
+    <div class="actions">
+      <a href="#journey" class="btn gold">Explore My Journey</a>
+      <a href="#projects" class="btn ghost">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="term">
+      <div class="term-bar"><i></i><i></i><i></i><span class="mono">rizki@tkj:~</span></div>
+      <pre class="mono"><span class="g">$</span> whoami
+rizki_badrur_ramadhan
+<span class="g">$</span> cat status.txt
+beginner developer
+currently learning...
+<span class="g">$</span> ping future
+64 bytes: time=0ms &#x2713;</pre>
+    </div>
+    <span class="chip c1 mono">HTML</span><span class="chip c2 mono">JS</span><span class="chip c3 mono">Roblox</span>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <h2>About Me</h2>
+  <div class="two">
+    <div>
+      <p>Nama saya Rizki Badrur Ramadhan. Saya merupakan siswa kelas XII TKJ A di SMK 3 Perguruan Cikini.</p>
+      <p>Saya tertarik dengan dunia teknologi dan sedang mencoba mempelajari berbagai bidang yang berhubungan dengan komputer, programming, game development, dan teknologi digital.</p>
+      <p>Saya masih berada pada tahap pemula dalam programming, tetapi saya terus belajar melalui praktik dan mencoba membuat berbagai project kecil.</p>
+    </div>
+    <div class="about-side">
+      <figure class="photo" id="photo">
+        <img src="Poto formal rizki.png" alt="Foto Rizki Badrur Ramadhan" width="400" height="500">
+        <figcaption class="mono">RBR</figcaption>
+      </figure>
+      <dl class="panel info mono">
+      <dt>School</dt><dd>SMK 3 Perguruan Cikini</dd>
+      <dt>Class</dt><dd>XII TKJ A</dd>
+      <dt>Major</dt><dd>Teknik Komputer dan Jaringan</dd>
+      <dt>Level</dt><dd>Beginner / Learning</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="journey" class="sec">
+  <h2>My Learning Journey</h2>
+  <ol class="timeline">
+    <li class="reveal"><h3>HTML</h3><p>Saya mulai mempelajari dasar HTML untuk memahami bagaimana sebuah website dibangun.</p></li>
+    <li class="reveal"><h3>JavaScript</h3><p>Saya mulai mengenal JavaScript untuk membuat website menjadi lebih interaktif.</p></li>
+    <li class="reveal"><h3>CSS &amp; Web Design</h3><p>Saya mempelajari dasar styling, layout, responsive design, dan bagaimana membuat website terlihat lebih menarik.</p></li>
+    <li class="reveal"><h3>Game Development</h3><p>Saya mulai mencoba membuat game dan memahami konsep dasar game development.</p></li>
+    <li class="reveal"><h3>Roblox Development</h3><p>Saya pernah membuat dan mencoba mengembangkan game di Roblox Studio, termasuk membuat map, platform, checkpoint, dan mekanik sederhana.</p></li>
+    <li class="reveal"><h3>Japanese Language</h3><p>Saya juga mempelajari bahasa Jepang secara mandiri, mulai dari Hiragana, Katakana, kosakata, dan pola kalimat dasar.</p></li>
+    <li class="reveal"><h3>Technology Exploration</h3><p>Saya terus mencoba mempelajari berbagai hal baru yang berhubungan dengan teknologi, komputer, AI, dan digital development.</p></li>
+  </ol>
+</section>
+
+<section id="skills" class="sec">
+  <h2>Skills &amp; Currently Learning</h2>
+  <div class="skills">
+    <div class="skill"><span>HTML</span><em>Learning</em><div class="dots" data-l="2"></div></div>
+    <div class="skill"><span>CSS</span><em>Learning</em><div class="dots" data-l="2"></div></div>
+    <div class="skill"><span>JavaScript</span><em>Beginner</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>Basic Web Development</span><em>Learning</em><div class="dots" data-l="2"></div></div>
+    <div class="skill"><span>Game Development</span><em>Exploring</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>Roblox Studio</span><em>Beginner</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>Basic C#</span><em>Beginner</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>Japanese Language</span><em>Beginner</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>AI Tools</span><em>Exploring</em><div class="dots" data-l="1"></div></div>
+    <div class="skill"><span>Basic Computer &amp; Networking</span><em>Learning</em><div class="dots" data-l="2"></div></div>
+  </div>
+  <p class="muted small">Titik hanya menunjukkan tahap belajar (1 = baru mulai, 2 = mulai terbiasa), bukan tingkat keahlian.</p>
+</section>
+
+<section id="projects" class="sec">
+  <h2>My Projects</h2>
+
+  <div class="grid">
+
+    <article class="card" tabindex="0">
+      <img src="unity kopdes project.png" alt="Membangun Kopdes" class="project-image">
+
+      <h3>Membangun Kopdes</h3>
+      <p>Game simulasi/management bertema koperasi desa yang sedang saya kembangkan menggunakan Unity. Project ini dibuat sebagai sarana belajar game development, UI, gameplay, dan programming.</p>
+      <p class="tags mono">Unity &middot; C# &middot; Game Development</p>
+      <span class="status">Currently Learning / In Development</span>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="Roblox Project.png" alt="Roblox Parkour" class="project-image">
+
+      <h3>Roblox Parkour</h3>
+      <p>Project game Roblox sederhana yang saya buat untuk belajar Roblox Studio, level design, checkpoint, platform, dan scripting.</p>
+      <p class="tags mono">Roblox Studio &middot; Lua/Luau &middot; Level Design</p>
+      <span class="status">Learning Project</span>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="porto.png" alt="Personal Portfolio" class="project-image">
+
+      <h3>Personal Portfolio</h3>
+      <p>Website portfolio personal yang dibuat untuk mempelajari HTML, CSS, JavaScript, responsive design, dan UI.</p>
+      <p class="tags mono">HTML &middot; CSS &middot; JavaScript</p>
+      <span class="status">Learning Project</span>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="Astra music tulus.png" class="project-image">
+
+      <h3>Astra Music</h3>
+      <p>Music player berbasis web untuk memutar dan mengelola koleksi musik secara lokal dengan tampilan modern, interaktif, dan responsif.</p>
+      <p class="tags mono">HTML &middot; CSS &middot; JavaScript</p>
+      <span class="status">Personal Project</span>
+    </article>
+
+    <article class="card" tabindex="0">
+      <img src="Jadwal.png" alt="Web Schedule Planner" class="project-image">
+  
+      <h3>Schedule Planner</h3>
+      <p>Website produktivitas berbasis game yang membantu pengguna mengatur jadwal dan membangun kebiasaan melalui sistem level, XP, streak harian, serta jam real-time dalam tampilan yang interaktif dan menarik.
+</p>
+      <p class="tags mono">HTML &middot; CSS &middot; JavaScript</p>
+      <span class="status">Personal Project</span>
+    </article>
+
+    <article class="card empty">
+      <h3>Project berikutnya</h3>
+      <p>Tempat untuk project baru. Tambahkan salinan &lt;article class="card"&gt; di index.html.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="tkj" class="sec">
+  <h2>Why TKJ?</h2>
+  <div class="two">
+    <div>
+      <p>Sebagai siswa Teknik Komputer dan Jaringan, saya mempelajari dasar-dasar komputer, jaringan, troubleshooting, dan teknologi informasi. Selain pembelajaran di sekolah, saya juga tertarik mengeksplorasi programming dan development.</p>
+    </div>
+    <svg class="topo" viewBox="0 0 400 250" role="img" aria-label="Diagram topologi jaringan sederhana: server, router, switch, dan komputer">
+      <g class="lines"><path d="M200 50V105M200 105L90 170M200 105L200 170M200 105L310 170M90 170V215M310 170V215"/></g>
+      <g class="nodes">
+        <rect x="170" y="20" width="60" height="30" rx="4"/><text x="200" y="40">Server</text>
+        <rect x="170" y="90" width="60" height="30" rx="4"/><text x="200" y="110">Router</text>
+        <rect x="60" y="155" width="60" height="30" rx="4"/><text x="90" y="175">Switch</text>
+        <rect x="170" y="155" width="60" height="30" rx="4"/><text x="200" y="175">PC</text>
+        <rect x="280" y="155" width="60" height="30" rx="4"/><text x="310" y="175">Laptop</text>
+        <rect x="60" y="215" width="60" height="26" rx="4"/><text x="90" y="233">PC-2</text>
+        <rect x="280" y="215" width="60" height="26" rx="4"/><text x="310" y="233">Printer</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Tech Stack</h2>
+  <ul class="stack mono">
+    <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>C#</li><li>Unity</li>
+    <li>Roblox Studio</li><li>Git</li><li>VS Code</li><li>AI Tools</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2>Always Learning</h2>
+  <ul class="values">
+    <li>Keep Learning</li><li>Build Through Practice</li><li>Learn From Mistakes</li>
+    <li>Explore New Technology</li><li>Start Small, Improve Gradually</li>
+  </ul>
+</section>
+
+<section id="contact" class="sec contact">
+  <h2>Let's Build Something.</h2>
+  <p class="lead">Saya masih dalam perjalanan belajar dan selalu terbuka untuk mempelajari hal baru, berdiskusi tentang teknologi, atau mengembangkan project bersama.</p>
+  <ul class="links mono">
+    <li><b>Email</b> 7jrizki@gmail.com</li>
+    <li><b>GitHub</b> 7jrizki-cyber</li>
+    <li><b>Instagram</b> Rizki__217</li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year">2026</span> Rizki Badrur Ramadhan</p>
+  <p>XII TKJ A &mdash; SMK 3 Perguruan Cikini</p>
+  <p class="mono muted">Built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<button id="top" class="top" aria-label="Kembali ke atas">&uarr;</button>
+<script src="script.js"></script>
+</body>
+</html>
