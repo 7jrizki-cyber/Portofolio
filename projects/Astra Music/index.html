@@ -1,0 +1,279 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTRA MUSIC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div class="noise"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ASTRA</span>
+        <small>MUSIC</small>
+      </div>
+
+      <nav>
+        <button class="nav-item active" data-page="home">
+          <span>⌂</span>Home
+        </button>
+        <button class="nav-item" data-page="discover">
+          <span>✦</span>Discover
+        </button>
+        <button class="nav-item" data-page="favorites">
+          <span>♡</span>Favorites
+        </button>
+      </nav>
+
+      <div class="sidebar-title">YOUR MUSIC</div>
+
+      <nav>
+        <button class="nav-item" data-page="library">
+          <span>♫</span>Library
+        </button>
+        <button class="nav-item" data-page="albums">
+          <span>▣</span>Albums
+        </button>
+        <button class="nav-item" data-page="artists">
+          <span>♬</span>Artists
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <span id="libraryStatus">READY</span>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="topbar">
+        <div class="page-title">
+          <span>ASTRA</span>
+          <strong id="pageTitle">HOME</strong>
+        </div>
+
+        <div class="top-actions">
+          <div class="search">
+            <span>⌕</span>
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search music..."
+            />
+          </div>
+
+          <label class="import-button">
+            <span>＋</span>
+            IMPORT FOLDER
+            <input
+              id="folderInput"
+              type="file"
+              accept="audio/*"
+              webkitdirectory
+              directory
+              multiple
+              hidden
+            />
+          </label>
+
+          <button id="accountButton" class="account-button" type="button">
+            <span>ASTRA MUSIC</span>
+            <small>↗</small>
+          </button>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <section class="page active-page" id="homePage">
+        <section class="hero">
+          <div class="hero-art">
+            <div class="art-inner">
+              <span id="artNumber">01</span>
+              <div class="art-symbol">◇</div>
+              <span class="art-label">ASTRA / AUDIO</span>
+            </div>
+
+            <div id="visualizer" class="visualizer" aria-hidden="true">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+
+          <div class="hero-info">
+            <div class="eyebrow">NOW PLAYING</div>
+
+            <div class="hero-title-window">
+              <h1 id="heroTitle">Select a song</h1>
+            </div>
+
+            <p id="heroArtist">Import your music collection</p>
+
+            <div class="hero-controls">
+              <button id="shuffleBtn" class="small-control">⤨</button>
+              <button id="prevBtn" class="control">◀</button>
+              <button id="playBtn" class="play-button">▶</button>
+              <button id="nextBtn" class="control">▶</button>
+              <button id="repeatBtn" class="small-control">↻</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="library-section">
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">YOUR COLLECTION</span>
+              <h2>Recently Added</h2>
+            </div>
+
+            <span id="trackCount">0 TRACKS</span>
+          </div>
+
+          <div id="homeTracks" class="track-list"></div>
+        </section>
+      </section>
+
+      <!-- DISCOVER -->
+      <section class="page" id="discoverPage">
+        <div class="page-heading">
+          <span>EXPLORE</span>
+          <h2>Discover</h2>
+          <p>Explore something from your music collection.</p>
+        </div>
+
+        <div id="discoverTracks" class="track-list"></div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section class="page" id="favoritesPage">
+        <div class="page-heading">
+          <span>YOUR PICKS</span>
+          <h2>Favorites</h2>
+          <p>Your favorite tracks.</p>
+        </div>
+
+        <div id="favoriteTracks" class="track-list"></div>
+      </section>
+
+      <!-- LIBRARY -->
+      <section class="page" id="libraryPage">
+        <div class="page-heading">
+          <div>
+            <span>COLLECTION</span>
+            <h2>Library</h2>
+            <p>Every song imported into ASTRA MUSIC.</p>
+          </div>
+
+          <button id="clearLibrary" class="danger-button">
+            CLEAR LIBRARY
+          </button>
+        </div>
+
+        <div id="libraryTracks" class="track-list"></div>
+      </section>
+
+      <!-- ALBUMS -->
+      <section class="page" id="albumsPage">
+        <div class="page-heading">
+          <span>COLLECTION</span>
+          <h2>Albums</h2>
+          <p>Albums detected from your music files.</p>
+        </div>
+
+        <div id="albumGrid" class="card-grid"></div>
+      </section>
+
+      <!-- ARTISTS -->
+      <section class="page" id="artistsPage">
+        <div class="page-heading">
+          <span>COLLECTION</span>
+          <h2>Artists</h2>
+          <p>Artists detected from your music files.</p>
+        </div>
+
+        <div id="artistGrid" class="artist-grid"></div>
+      </section>
+    </main>
+
+    <!-- PLAYER -->
+    <footer class="player">
+      <div class="current-song">
+        <div class="mini-art">◇</div>
+
+        <div class="mini-info">
+          <strong id="miniTitle">Nothing playing</strong>
+          <span id="miniArtist">—</span>
+        </div>
+
+        <button id="favoriteBtn" class="heart" type="button">♡</button>
+      </div>
+
+      <div class="player-center">
+        <div class="player-buttons">
+          <button id="bottomPrev" type="button">◀</button>
+
+          <button id="bottomPlay" class="bottom-play" type="button">
+            ▶
+          </button>
+
+          <button id="bottomNext" type="button">▶</button>
+        </div>
+
+        <div class="progress-area">
+          <span id="currentTime">0:00</span>
+
+          <input
+            id="progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+          />
+
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="volume-area">
+        <span>♩</span>
+
+        <input
+          id="volume"
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.8"
+        />
+      </div>
+    </footer>
+
+    <audio id="audio"></audio>
+
+    <!-- Supabase JS client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
